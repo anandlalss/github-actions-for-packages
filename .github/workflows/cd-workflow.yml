@@ -5,10 +5,10 @@ on:
   push:
     paths:
       - "**Dockerfile**"
-  Build-and-Push-Docker-Image:
-    runs-on: ubuntu-latest
-    needs: test
-    name: Docker Build, Tag, Push
+  Build-and-Push-Docker-Image: docker pull alpine/git:latest
+    runs-on:ubuntu-latest
+    needs:test
+    name:Docker Build, Tag, Push
 
     steps:
     - name: Checkout
